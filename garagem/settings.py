@@ -1,3 +1,4 @@
+import os
 
 from pathlib import Path
 
@@ -11,7 +12,7 @@ SECRET_KEY = "django-insecure-d=54mgg4nn1=v_#hebbb=_(csuf1&3vhyy(rlu(y7#icuuj$0x
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 
@@ -36,6 +37,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "corsheaders.middleware.CorsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "garagem.urls"
@@ -109,3 +111,4 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOW_ALL_ORIGINS = True
+
